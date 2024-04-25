@@ -1,5 +1,7 @@
 package com.example.demospringscopebeansandannotations;
 
+import com.example.demospringscopebeansandannotations.customlistner.CustomSpringEventPublisher;
+import com.example.demospringscopebeansandannotations.listener.SpringContextListener;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,12 @@ public class ServiceA {
   private JavaSingleton javaSingleton;
   private JavaPrototype javaPrototype;
   private CustomSpringEventPublisher eventPublisher;
+  private SpringContextListener springContextListener;
+
+  public void setSpringContextListener(
+      SpringContextListener springContextListener) {
+    this.springContextListener = springContextListener;
+  }
 
   @Autowired
   public void setEventPublisher(
@@ -23,6 +31,7 @@ public class ServiceA {
   public ServiceA() {
     log.info("Создание ServiceA");
   }
+
 
   @Autowired
   public void setAnnoSingleton(AnnoSingleton annoSingleton) {

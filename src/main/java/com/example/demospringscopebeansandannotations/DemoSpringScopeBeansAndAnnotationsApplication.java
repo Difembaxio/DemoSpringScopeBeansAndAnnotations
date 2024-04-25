@@ -12,6 +12,13 @@ public class DemoSpringScopeBeansAndAnnotationsApplication {
     ConfigurableApplicationContext context = SpringApplication.run(
         DemoSpringScopeBeansAndAnnotationsApplication.class, args);
     context.start();
+    System.out.println("---------------------------------------");
+    User user = context.getBean(User.class);
+    user.userDetails();
+    System.out.println("---------------------------------------");
+    context.close();
+
+    /*
     ServiceA serviceA = context.getBean(ServiceA.class);
     ServiceB serviceB = context.getBean(ServiceB.class);
     serviceA.setAnnoSingleton(new AnnoSingleton());
@@ -24,6 +31,6 @@ public class DemoSpringScopeBeansAndAnnotationsApplication {
     serviceB.setJavaSingleton(new JavaSingleton());
     serviceB.setJavaPrototype(new JavaPrototype());
 
-    context.close();
+    */
   }
 }

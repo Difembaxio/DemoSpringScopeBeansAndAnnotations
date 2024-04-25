@@ -1,4 +1,4 @@
-package com.example.demospringscopebeansandannotations;
+package com.example.demospringscopebeansandannotations.customlistner;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;

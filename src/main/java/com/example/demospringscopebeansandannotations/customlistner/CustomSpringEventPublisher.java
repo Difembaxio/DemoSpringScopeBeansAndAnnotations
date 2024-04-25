@@ -1,4 +1,4 @@
-package com.example.demospringscopebeansandannotations;
+package com.example.demospringscopebeansandannotations.customlistner;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
