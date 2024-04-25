@@ -14,6 +14,7 @@ public class DemoSpringScopeBeansAndAnnotationsApplication {
     context.start();
     System.out.println("---------------------------------------");
     User user = context.getBean(User.class);
+    user.setName("Anton");
     user.userDetails();
     System.out.println("---------------------------------------");
     context.close();

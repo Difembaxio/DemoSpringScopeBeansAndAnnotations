@@ -16,7 +16,7 @@ public class SpringContextListener {
 
   @EventListener
   public void handleContextRefreshedEvent(ContextRefreshedEvent event) {
-    log.info("Context refreshed " +  event);
+    log.info("Context refreshed " + event);
   }
 
   @EventListener
@@ -26,12 +26,12 @@ public class SpringContextListener {
 
   @EventListener
   public void handleContextStoppedEvent(ContextStoppedEvent event) {
-    log.info("Context stopped " +  event);
+    log.info("Context stopped " + event);
   }
 
   @EventListener
   public void handleContextClosedEvent(ContextClosedEvent event) {
-    log.info("Context closed" +  event);
+    log.info("Context closed" + event);
   }
 }
 
